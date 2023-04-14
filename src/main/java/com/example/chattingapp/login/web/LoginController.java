@@ -1,4 +1,4 @@
-package com.example.chattingapp.chattingApp.Cotroller;
+package com.example.chattingapp.login.web;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
