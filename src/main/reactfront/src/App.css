@@ -1,51 +1,39 @@
-.App {
-  text-align: center;
-}
-
-
-.start-screen {
+.App{
+  position: relative;
   width: 100vw;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  box-sizing: border-box;
 }
-
-.start-screen .start-screen__elements img {
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
-}
-
-.start-screen .start-screen__elements h3{
-  font-weight: 700;
-  font-size: 25px;
-  line-height: 30px;
-  letter-spacing: -0.02em;
+.alert-only-number{
+  color: red;
 }
 
 
-.start-screen .start-screen__elements span{
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 22px;
-  color : var(--color-76);
+.vertical-line{
+  margin : 0px 10px;
+  width : 1px;
+  height: 20px;
+  border-left : 1px solid #DCDCE7;
 }
-
 
 .margin-top-150 {
   margin-top: 150px;
 }
 
-.main-color__btn{
+.continue__button{
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.continue__button .main-color__btn{
   width: 80vw;
   display: flex;
   align-items: flex-end;
   justify-content: center;
   text-align: center;
   padding: 18px 20px;
-  gap: 10px;
   border-radius: 8px;
   background: var(--main-color);
   font-weight: 700;
@@ -53,4 +41,10 @@
   border: 1px solid var(--main-color);
   font-size: 17px;
 }
+.continue__button .main-color__btn:disabled{
+  background: #F1F1F5;  
+  border: none;
+  color: #999999;
+}
+
 

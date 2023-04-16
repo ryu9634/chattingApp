@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
-import logo1 from './images/logo/LINE_logo1.png';
+import StartScreen from './components/StartScreen.js';
+import Authentication from './components/Authentication.js';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 
 function App() {
+  const [page, setPage] = useState(0);
+  const navigator = useNavigate();
+  
   return (
     <div className="App">
-
-      <div className='start-screen'>
-        <div className='start-screen__elements'>
-          <img src={logo1} alt='로고' className='logo'/>
-          <h3>환영합니다.</h3>
-          <span>무료 메시지와 영상통화, 음성통화를 부담 없이 즐겨보세요!</span>
-        </div>
-        <button className='main-color__btn margin-top-150'>Start Messaging</button>
-      </div>
+      <Routes>
+        <Route path='/' element={ <StartScreen navigator={navigator} page={page} setPage={setPage} /> }/>
+        <Route path='/Authentication' element={ <Authentication/> }/>
+      </Routes>
     </div>
   );
 }

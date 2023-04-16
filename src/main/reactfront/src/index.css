@@ -1,11 +1,14 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css");
 
+/*Main Components Elements*/
+@import url('./components/css/main.css');
+
+
+
 :root{
   --main-font : "Pretendard";
   --main-color:#06C755; 
-
-
-  
+  --main-margin-25px: 25px;
   --color-76 : #767676;
 }
 
