@@ -29,3 +29,18 @@
  - 언어수준 - SDK 디폴트 (17)
 </br>
 
+
+## Front
+
+### 2023-04-16 react CRA PWA 프로젝트로 변경 (정운만)
+1. 추가된 디렉토리
+<ui>api => api 관련 js 모음 </ui>
+<ui>components => react Components js 모음</ui>
+<ui>components/css => components 관련 css 모음</ui>
+<ui>images => 잡다한 이미지 넣기</ui>
+<ui>images/logo => logo 이미지 모음 (규격에 맞는)</ui>
+
+2. 앞으로 할 것
+css 분리하고, 동적 화면 만들기\
+분기\
+회원가입 및 로그인 인증 화면  

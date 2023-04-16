@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import logo1 from './images/logo/LINE_logo1.png';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <div className='start-screen'>
+        <div className='start-screen__elements'>
+          <img src={logo1} alt='로고' className='logo'/>
+          <h3>환영합니다.</h3>
+          <span>무료 메시지와 영상통화, 음성통화를 부담 없이 즐겨보세요!</span>
+        </div>
+        <button className='main-color__btn margin-top-150'>Start Messaging</button>
+      </div>
     </div>
   );
 }
