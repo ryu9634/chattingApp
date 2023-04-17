@@ -9,9 +9,6 @@ function Verification(props){
     let  checkNumber;
     return(
         <>
-        <button onClick={()=>{
-            console.log(number.length)
-        }}></button>
             <div className="verifictions">
                 <div className='verifictions__row'>
                     <div className='text-box mg-t-100 mg-bt-30'>
