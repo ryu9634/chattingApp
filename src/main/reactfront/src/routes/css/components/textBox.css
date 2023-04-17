@@ -1,0 +1,14 @@
+.text-box{
+    width: 100%;
+}
+
+.text-box__text--bold{
+    font-size: 25px;
+    font-weight: 700; 
+}
+
+.text-box__text--small{
+    font-weight: 400;
+    font-size: 16px;
+    color:var(--color-76);
+}

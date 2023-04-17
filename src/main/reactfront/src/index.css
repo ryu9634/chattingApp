@@ -1,7 +1,18 @@
+/* 글꼴 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.5/dist/web/static/pretendard-dynamic-subset.css");
 
-/*Main Components Elements*/
-@import url('./components/css/main.css');
+/* Main Components */
+@import url('./routes/css/components/textBox.css');
+
+
+/*Main Elements*/
+@import url('./reset.css');
+@import url('./routes/css/elements/buttons.css');
+@import url('./routes/css/elements/dividingLines.css');
+@import url('./routes/css/elements/alerts.css');
+@import url('./routes/css/elements/margins.css');
+@import url('./routes/css/elements/paddings.css'); 
+@import url('./routes/css/elements/modals.css'); 
 
 
 
@@ -24,4 +35,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+/* input type 넘버만 치게 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* 파이어폭스에서의 초기화 방법 */
+input[type=number] {
+    -moz-appearance: textfield;
 }

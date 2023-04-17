@@ -1,0 +1,30 @@
+.verifictions{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0px var(--main-margin-25px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.verifictions__row{
+    width: 100%;
+}
+
+.verifictions__timerBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.verifictions__sendMessage{
+    font-weight: 400;
+    font-size: 16px;
+    color:rgba(118, 118, 118, 1);
+}
+
+.verifictions__timer{
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--main-color);
+}

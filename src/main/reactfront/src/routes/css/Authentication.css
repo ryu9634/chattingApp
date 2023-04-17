@@ -1,0 +1,89 @@
+
+.authentication{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 0px var(--main-margin-25px);
+}
+
+.authentication__bold-text{
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+.authentication__small--text{
+    font-weight: 400;
+    font-size: 16px;
+    color:var(--color-76);
+}
+.authentication__row{   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.authentication__row:last-child{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 58px;
+    width: 100%;
+    border: 1px solid #E5E5EC;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.authentication__row:last-child .authentication__column:first-child{
+    display: flex;
+    justify-content: flex-end;
+    width: 15%;
+}
+.authentication__row:last-child .authentication__column:last-child{
+    width: 95%;
+}
+
+.authentication__column:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.authentication__column:last-child{
+    box-sizing: border-box;
+}
+
+.authentication__column:last-child input{
+    border : none;
+    height: 45px;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+/* 모달 */
+.modalAuthentication{
+    width: 100%;
+}
+
+.modal-Authentication__text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-Authentication__small--text{
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(118, 118, 118, 1);
+}
+
+.modal-Authentication__phoneNumber{
+    font-weight: 700;
+    font-size: 17px;
+}

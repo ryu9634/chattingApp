@@ -4,47 +4,6 @@
   height: 100vh;
   box-sizing: border-box;
 }
-.alert-only-number{
-  color: red;
-}
 
-
-.vertical-line{
-  margin : 0px 10px;
-  width : 1px;
-  height: 20px;
-  border-left : 1px solid #DCDCE7;
-}
-
-.margin-top-150 {
-  margin-top: 150px;
-}
-
-.continue__button{
-  margin-top: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.continue__button .main-color__btn{
-  width: 80vw;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: center;
-  padding: 18px 20px;
-  border-radius: 8px;
-  background: var(--main-color);
-  font-weight: 700;
-  color : white;
-  border: 1px solid var(--main-color);
-  font-size: 17px;
-}
-.continue__button .main-color__btn:disabled{
-  background: #F1F1F5;  
-  border: none;
-  color: #999999;
-}
 
 

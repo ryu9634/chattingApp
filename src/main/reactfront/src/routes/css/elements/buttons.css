@@ -1,0 +1,57 @@
+.buttonFlexBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+.buttonFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.buttonFlex .success__button,
+.buttonFlexBox .success__button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 18px 20px;
+  border-radius: 8px;
+  background: var(--main-color);
+  font-weight: 700;
+  color : white;
+  border: 1px solid var(--main-color);
+  font-size: 17px;
+}
+.buttonFlex .success__button:disabled,
+.buttonFlexBox .success__button:disabled{
+  background: #F1F1F5;  
+  border: none;
+  color: #999999;
+}
+
+.buttonFlex .cancle__button,
+.buttonFlexBox .cancle__button{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 18px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 17px;
+  background: #F1F1F5;  
+  border: 1px solid #F1F1F5;
+  color: #999999;
+}
+
+
+
+
+/* .buttonFlex,
+.buttonFlexBox */
