@@ -31,35 +31,34 @@
 
 
 ## Front
-
 ### 2023-04-16 react CRA PWA 프로젝트로 변경 (정운만)
 1. 추가된 디렉토리
-<ul>api => api 관련 js 모음 </ul>
-<ul>components => react Components js 모음</ul>
-<ul>components/css => components 관련 css 모음</ul>
-<ul>images => 잡다한 이미지 넣기</ul>
-<ul>images/logo => logo 이미지 모음 (규격에 맞는)</ul>
+- api => api 관련 js 모음 
+- components => react Components js 모음
+- components/css => components 관련 css 모음
+- images => 잡다한 이미지 넣기
+- images/logo => logo 이미지 모음 (규격에 맞는)
 
 
 ### 2023-04-17 1차 Commit 회원 인증 단계 (정운만)
 1. 추가된 디렉토리
-<ul>store => redux 쓸 때 store 모아둘 디렉토리</ul>
-<ul>images/buttons => >나< 처럼 버튼 역할을 하는 img 모음 디렉토리</ul>
+- store => redux 쓸 때 store 모아둘 디렉토리
+- images/buttons => >나< 처럼 버튼 역할을 하는 img 모음 디렉토리
 
 2. 추가된 js파일
-<ul>Authentication.js => 회원번호 입력하는 파일 (아직 보완 필요)</ul>
-<ul>StartScreen.js => 첫화면</ul>
+- Authentication.js => 회원번호 입력하는 파일 (아직 보완 필요)
+- StartScreen.js => 첫화면
 
 3. 추가된 css 파일
-<ul>components/css/ 파일들은 js 파일명과 같음 매칭</ul>
-<ul>main.css => 최상위 css파일로 만들려 했으나 굳이...? 나중에 확인해보도록 하겠음.</ul>
-<ul>styled-components 사용 고려 중</ul>
+- components/css/ 파일들은 js 파일명과 같음 매칭
+- main.css => 최상위 css파일로 만들려 했으나 굳이...? 나중에 확인해보도록 하겠음.
+- styled-components 사용 고려 중
 
 4. 다음으로 할 것.
-<ul>AuthenticationModal 만들기<ul>
-<ul>분기 지어서 화면 뿌리기 (일부완성 - 2023-04-17)\</ul>
-<ul>css 분리하고, 동적 화면 만들기 (진행중)\</ul>
-<ul>회원가입 및 로그인 인증 화면 (진행중)</ul>
+- AuthenticationModal 만들기 
+- 분기 지어서 화면 뿌리기 (일부완성 - 2023-04-17)
+- css 분리하고, 동적 화면 만들기 (진행중)
+- 회원가입 및 로그인 인증 화면 (진행중)
 
 
 ### 2023-04-18 Commit 회원 인증 단계 (UI, 기능 구현 완료) (정운만)
@@ -83,3 +82,9 @@
 3. 다음으로 할 것.
 - Authentication.js, Verification.js ajax 도입
 - ChatList 화면 구성
+
+## Completed Front (완료 일자)
+- AuthenticationModal.js (2023-04-18)
+- 분기 지어서 화면 뿌리기 (2023-04-18)
+- css 분리하고, 동적 화면 만들기 (2023-04-18)
+- 회원가입 및 로그인 인증 화면 (2023-04-18)
