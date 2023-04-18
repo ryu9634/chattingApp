@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import store from './store/store.js';
+import store from './store.js';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 

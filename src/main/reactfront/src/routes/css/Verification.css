@@ -20,11 +20,43 @@
 .verifictions__sendMessage{
     font-weight: 400;
     font-size: 16px;
-    color:rgba(118, 118, 118, 1);
+    color:var(--main-color);
 }
 
 .verifictions__timer{
     font-weight: 400;
     font-size: 16px;
     color: var(--main-color);
+}
+
+.verifictions__numbers{
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.verifictions__number{
+    text-align: center;
+    width:10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 5px;
+    background: #FFFFFF;
+    border: 1px solid #E5E5EC;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.verifictions__number:focus{
+    outline: none;
+    border: 2px solid var(--main-color);
+}
+
+.verifictions__send--disabled{
+    font-weight: 400;
+    font-size: 16px;
+    color:rgba(118, 118, 118, 1);
 }

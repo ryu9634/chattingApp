@@ -62,4 +62,24 @@
 <ul>회원가입 및 로그인 인증 화면 (진행중)</ul>
 
 
+### 2023-04-18 Commit 회원 인증 단계 (UI, 기능 구현 완료) (정운만)
 
+1. 나중에 기능 개선할 것들
+- 국가코드 다양화
+- 번호 입력 후 인증 번호 입력 페이지로 넘어갈 때 번호 입력했는지 검증 => URL GET방식으로 접속 방지
+- redux toolkit으로 state 저장
+
+2. 커밋한 파일
+- reactfront\package-lock.json
+- reactfront\package.json
+- reactfront\src\index.js
+- reactfront\src\routes\css\elements\alerts.css
+- reactfront\src\routes\css\Verification.css
+- reactfront\src\routes\Verification.js
+- reactfront\src\store.js
+- reactfront\src\store\store.js
+- reactfront\src\store\timeSlice.js
+
+3. 다음으로 할 것.
+- Authentication.js, Verification.js ajax 도입
+- ChatList 화면 구성
