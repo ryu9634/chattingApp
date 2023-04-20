@@ -1,12 +1,36 @@
 import './css/Authentication.css'
 import arrowRight from './../images/buttons/arrow-right.png';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Authentication(props){
     const [phoneNumber,setPhoneNumber] = useState('');
     const [alert,setAlert] = useState(false);
-    const [complete,setComplete] = useState(false);
+    const [complete,setComplete] = useState(true);
     const [modalAuthentication, setModalAuthentication] = useState(false);
+
+    useEffect(()=>{
+        if(phoneNumber.length === 11){
+            setComplete(false);
+        }else{
+            setComplete(true);
+        }
+    },[phoneNumber])
+
+    function checkRegex(event){
+        //인풋태그에 숫자만 넣게하는 정규식
+        const regex = /^[0-9\b]+$/;
+        let value = event.target.value;
+        if (regex.test(value)){
+            setPhoneNumber(value);
+            setAlert(false);
+        }else{
+            value.length <= 1? value = "" :
+            value = phoneNumber;
+            setPhoneNumber(value);
+            setAlert(true);
+        }
+    }
+
     return (
         <>
             {/* 모달창 띄우는 곳 */}
@@ -22,36 +46,14 @@ function Authentication(props){
                         </div>
                         <div className='authentication__row'>
                             <div className='authentication__column'>+82 <span className='text-gray-verticalLine' ></span></div>
-                            <div className='authentication__column'><input type='text' placeholder='01011112222' maxLength={11} onChange={(e)=>{
-                                //인풋태그에 숫자만 넣게하는 정규식
-                                const regex = /^[0-9\b]+$/;
-                                if (regex.test(e.target.value)){
-                                    setPhoneNumber(e.target.value);
-                                    setAlert(false);
-                                    if(phoneNumber.length === 10){
-                                        setComplete(true);
-                                    }else{
-                                        setComplete(false);
-                                    }
-                                }else{
-                                    e.target.value.length <= 1? e.target.value = "" :
-                                    e.target.value = phoneNumber;
-                                    setPhoneNumber(e.target.value);
-                                    setAlert(true);
-                                }
-                                }} /></div>
+                            <div className='authentication__column'><input value={phoneNumber} type='text' placeholder='01011112222' maxLength={11} onChange={checkRegex}/></div>
                         </div>
                     </form>
-                    {
-                        alert ? <div className='alert-only-number mg-t-10'>휴대폰 번호를 입력하세요</div> : null
-                    }
+                    {alert && <div className='alert-only-number mg-t-10'>휴대폰 번호를 입력하세요</div>}
                 </div>
                 <div className='buttonFlexBox mg-bt-30'>
-                    {
-                        complete?<button className='success__button' onClick={()=>{setModalAuthentication(true)}}>Continue</button>
-                        :<button disabled className='success__button'>Continue</button>
-                    }
-                    
+                    <button className='success__button' onClick={()=>{setModalAuthentication(true)}} disabled={complete}>Continue</button>
+  
                 </div>
             </div>
         </>

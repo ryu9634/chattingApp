@@ -41,7 +41,7 @@ function Verification(props){
                             })
                         }
                     </div>
-                    {alert?<AlertNumber/> : null}
+                    {alert&&<AlertNumber/>}
                 </div>
                 <div className='verifictions__row'>
                     <div className='verifictions__timerBox'>
@@ -62,36 +62,39 @@ function Verification(props){
 
 
 function Numbers(props){
+    function goToTheNextInput(e){
+        const regex = /^[0-9\b]+$/;
+                if(regex.test(e.target.value)){
+                    //자동으로 다음으로 넘기기
+                    props.number[props.i] = e.target.value;
+                    props.setNumber(props.number);
+                    props.setAlert(false);
+                    if(props.i<5){
+                        props.refs[props.i+1].current.focus();
+                    }else{
+                        props.setIsContinue(true);
+                    }
+                }else{
+                    e.target.value = '';
+                    props.setAlert(true);
+                }
+    }
+
+    function goToBackInput(e){
+        if(e.keyCode === 8){
+            if(props.i === 0){
+                props.refs[props.i].current.focus();
+                props.setIsContinue(false);
+            }else{
+                e.target.value = null;
+                props.refs[props.i-1].current.focus();
+                props.setIsContinue(false);
+            }
+        }
+    }
     return(
         <>
-        <input type='text' inputMode='numeric' className='verifictions__number' maxLength={1} ref={props.refs[props.i]} onChange={(e)=>{
-                                        const regex = /^[0-9\b]+$/;
-                                        if(regex.test(e.target.value)){
-                                            //자동으로 다음으로 넘기기
-                                            props.number[props.i] = e.target.value;
-                                            props.setNumber(props.number);
-                                            props.setAlert(false);
-                                            if(props.i<5){
-                                                props.refs[props.i+1].current.focus();
-                                            }else{
-                                                props.setIsContinue(true);
-                                            }
-                                        }else{
-                                            e.target.value = '';
-                                            props.setAlert(true);
-                                        }
-                                    }} onKeyDown={(e)=>{
-                                        if(e.keyCode === 8){
-                                            if(props.i === 0){
-                                                props.refs[props.i].current.focus();
-                                                props.setIsContinue(false);
-                                            }else{
-                                                e.target.value = null;
-                                                props.refs[props.i-1].current.focus();
-                                                props.setIsContinue(false);
-                                            }
-                                        }
-                                    }} />
+            <input type='text' inputMode='numeric' className='verifictions__number' maxLength={1} ref={props.refs[props.i]} onChange={goToTheNextInput} onKeyDown={goToBackInput} />
         </>
     )
 }

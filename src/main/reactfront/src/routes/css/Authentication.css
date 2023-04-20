@@ -37,7 +37,10 @@
     background-color: #FFFFFF;
     padding: 10px 20px;
     box-sizing: border-box;
+    transition: all ease-in-out 0.5s;
 }
+
+
 
 .authentication__row:last-child .authentication__column:first-child{
     display: flex;
@@ -57,11 +60,17 @@
     box-sizing: border-box;
 }
 
+.authentication__row:last-child:focus-within{
+    outline: none;
+    border: 1px solid var(--main-color);
+}
+
 .authentication__column:last-child input{
     border : none;
     height: 45px;
     width: 100%;
     font-size: 16px;
+    outline: none;
 }
 
 

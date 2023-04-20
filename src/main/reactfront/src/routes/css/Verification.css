@@ -48,11 +48,12 @@
     border-radius: 8px;
     font-weight: 700;
     font-size: 18px;
+    transition: all ease-in-out 0.2s;
 }
 
 .verifictions__number:focus{
     outline: none;
-    border: 2px solid var(--main-color);
+    border: 1px solid var(--main-color);
 }
 
 .verifictions__send--disabled{

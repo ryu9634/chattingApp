@@ -26,12 +26,12 @@
   color : white;
   border: 1px solid var(--main-color);
   font-size: 17px;
+  transition: all ease-in-out 0.5s;
 }
 .buttonFlex .success__button:disabled,
 .buttonFlexBox .success__button:disabled{
   background: #F1F1F5;  
   border: none;
-  color: #999999;
 }
 
 .buttonFlex .cancle__button,

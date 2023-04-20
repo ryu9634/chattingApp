@@ -54,13 +54,6 @@
 - main.css => 최상위 css파일로 만들려 했으나 굳이...? 나중에 확인해보도록 하겠음.
 - styled-components 사용 고려 중
 
-4. 다음으로 할 것.
-- AuthenticationModal 만들기 
-- 분기 지어서 화면 뿌리기 (일부완성 - 2023-04-17)
-- css 분리하고, 동적 화면 만들기 (진행중)
-- 회원가입 및 로그인 인증 화면 (진행중)
-
-
 ### 2023-04-18 Commit 회원 인증 단계 (UI, 기능 구현 완료) (정운만)
 
 1. 나중에 기능 개선할 것들
@@ -88,3 +81,19 @@
 - 분기 지어서 화면 뿌리기 (2023-04-18)
 - css 분리하고, 동적 화면 만들기 (2023-04-18)
 - 회원가입 및 로그인 인증 화면 (2023-04-18)
+
+### 2023-04-18 Clean Code 적용 및 CSS transition 추가
+
+1. 커밋한 파일
+- reactfront\src\routes\Authentication.js
+- reactfront\src\routes\css\Authentication.css
+- reactfront\src\routes\css\elements\buttons.css
+- reactfront\src\routes\css\Verification.css
+- reactfront\src\routes\Verification.js
+
+2. transition 추가 및 Clean Code 적용
+
+3. Bug fixed
+Authentication 페이지에서 11자리를 입력받고
+한번에 모두 입력된 번호를 지워도 Coutinue 버튼 활성화 되던 Bug fixed
+
