@@ -82,7 +82,7 @@
 - css 분리하고, 동적 화면 만들기 (2023-04-18)
 - 회원가입 및 로그인 인증 화면 (2023-04-18)
 
-### 2023-04-18 Clean Code 적용 및 CSS transition 추가
+### 2023-04-20 Clean Code 적용 및 CSS transition 추가
 
 1. 커밋한 파일
 - reactfront\src\routes\Authentication.js
@@ -97,3 +97,19 @@
 Authentication 페이지에서 11자리를 입력받고
 한번에 모두 입력된 번호를 지워도 Coutinue 버튼 활성화 되던 Bug fixed
 
+
+### 2023-04-21 SetNickName 화면 생성
+1. 커밋한 파일
+- reactfront\src\routes\css\components\register.css
+- reactfront\src\routes\css\Verification.css
+- reactfront\src\routes\css\SetNickName.css
+- reactfront\src\routes\Verification.js
+- reactfront\src\routes\SetNickName.js
+- reactfront\src\index.css
+- reactfront\src\App.js
+
+2. SetNickName 화면 생성, 기능구현 X
+
+3. 변경된 점
+- Verification 과 SetNickName.js 화면에서 공통된 부분 register.css 로 Export
+- 추후 Authentication.js 화면도 적용해서 컴포넌트화 완성합니다.
