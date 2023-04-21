@@ -3,6 +3,7 @@
 
 /* Main Components */
 @import url('./routes/css/components/textBox.css');
+@import url('./routes/css/components/register.css');
 
 
 /*Main Elements*/
@@ -20,6 +21,8 @@
   --main-font : "Pretendard";
   --main-color:#06C755; 
   --main-margin-25px: 25px;
+  --main-padding-25px: 25px;
+  --main-border-radius : 8px;
   --color-76 : #767676;
 }
 

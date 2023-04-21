@@ -26,8 +26,8 @@ function Verification(props){
     },[dispatch,isDecreasing])
     return(
         <>
-            <div className="verifictions">
-                <div className='verifictions__row'>
+            <div className="register verifictions">
+                <div className='register__row'>
                     <div className='text-box mg-t-100 mg-bt-30'>
                             <h3 className='text-box__text--bold mg-bt-10'>인증번호 입력</h3>
                             <p className='text-box__text--small'>국가 코드를 확인하고 전화번호를 입력하세요.</p>
@@ -43,7 +43,7 @@ function Verification(props){
                     </div>
                     {alert&&<AlertNumber/>}
                 </div>
-                <div className='verifictions__row'>
+                <div className='register__row'>
                     <div className='verifictions__timerBox'>
                         {isResendMessageAble?
                         <span className='verifictions__sendMessage' onClick={()=>{dispatch(resendCountUp())}}>인증번호 다시 받기</span>
@@ -51,7 +51,7 @@ function Verification(props){
                         <span className='verifictions__timer '>{time} 초</span>
                     </div>
                     <div className='buttonFlexBox mg-t-5 mg-bt-30'>
-                        {isContinue && isDecreasing ? <button className='success__button' onClick={()=>{console.log("컨티뉴 누름")}}>Continue</button>:
+                        {isContinue && isDecreasing ? <button className='success__button' onClick={()=>{props.navigator("/SetNickName")}}>Continue</button>:
                         <button className='success__button' disabled>Continue</button>}
                     </div>
                 </div>

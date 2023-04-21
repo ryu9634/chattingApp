@@ -1,4 +1,4 @@
-.verifictions{
+/* .verifictions{
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
@@ -10,7 +10,7 @@
 }
 .verifictions__row{
     width: 100%;
-}
+} */
 
 .verifictions__timerBox{
     display: flex;
