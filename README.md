@@ -108,8 +108,19 @@ Authentication 페이지에서 11자리를 입력받고
 - reactfront\src\index.css
 - reactfront\src\App.js
 
-2. SetNickName 화면 생성, 기능구현 X
+2. SetNickName 화면 생성 O, 기능구현 X
 
 3. 변경된 점
 - Verification 과 SetNickName.js 화면에서 공통된 부분 register.css 로 Export
 - 추후 Authentication.js 화면도 적용해서 컴포넌트화 완성합니다.
+
+
+### 2023-04-22 SetNickName 화면 기능구현
+
+1. 커밋한 파일
+- reactfront\src\routes\css\SetNickName.css
+- reactfront\src\routes\SetNickName.js
+- reactfront\src\store.js
+- reactfront\src\store\userSlice.js
+
+2. SetNickName 화면 생성 O, 기능구현 O

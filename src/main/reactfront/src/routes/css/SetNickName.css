@@ -6,6 +6,7 @@
     height: 58px;
     border: 1px solid #e5e5ec;
     border-radius: var(--main-border-radius);
+    transition: border ease-in-out 0.5s;
 }
 
 
@@ -16,4 +17,8 @@
     font-size: 16px;
     border:none;
     outline: none;
+}
+
+.setNickName__input:focus-within{
+    border: 1px solid var(--main-color);
 }
