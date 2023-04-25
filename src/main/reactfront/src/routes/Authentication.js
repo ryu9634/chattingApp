@@ -1,9 +1,12 @@
 import './css/Authentication.css'
 import arrowRight from './../images/buttons/arrow-right.png';
 import { useEffect, useState } from 'react';
+import { setPhoneNumber } from '../store/userSlice.js';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Authentication(props){
-    const [phoneNumber,setPhoneNumber] = useState('');
+    const dispatch = useDispatch();
+    const {phoneNumber} =useSelector((state)=> state.userInfo);
     const [alert,setAlert] = useState(false);
     const [complete,setComplete] = useState(true);
     const [modalAuthentication, setModalAuthentication] = useState(false);
@@ -21,12 +24,12 @@ function Authentication(props){
         const regex = /^[0-9\b]+$/;
         let value = event.target.value;
         if (regex.test(value)){
-            setPhoneNumber(value);
+            dispatch(setPhoneNumber(value));
             setAlert(false);
         }else{
             value.length <= 1? value = "" :
             value = phoneNumber;
-            setPhoneNumber(value);
+            dispatch(setPhoneNumber(value));
             setAlert(true);
         }
     }
@@ -66,9 +69,9 @@ function CheckAuthenticationModal(props){
         <>
             <div className='modal modal-Authentication'>
                 <div className='modal__body'>
-                    <div className='modal-Authentication__text-box'>
+                    <div className='modal__text-box'>
                         <span className='modal-Authentication__phoneNumber'>{`+82 ${props.phoneNumber}`}</span>
-                        <p className='modal-Authentication__small--text mg-t-10'>이 전화번호로 SMS 인증번호를 보냅니다.</p>
+                        <p className='modal__small--text mg-t-10'>이 전화번호로 SMS 인증번호를 보냅니다.</p>
                     </div>
                     <div className='buttonFlexBox'>
                         <button className='success__button mg-t-10' onClick={()=>{props.navigator('/Verification')}}>전송</button>

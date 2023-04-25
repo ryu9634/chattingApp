@@ -6,7 +6,7 @@
     width: 100vw;
     height: 100vh;
     box-sizing: border-box;
-    padding: 0px var(--main-margin-25px);
+    padding: 0px var(--main-padding-25px);
 }
 
 .authentication__bold-text{
@@ -71,28 +71,4 @@
     width: 100%;
     font-size: 16px;
     outline: none;
-}
-
-
-/* 모달 */
-.modalAuthentication{
-    width: 100%;
-}
-
-.modal-Authentication__text-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-Authentication__small--text{
-    font-weight: 400;
-    font-size: 16px;
-    color: rgba(118, 118, 118, 1);
-}
-
-.modal-Authentication__phoneNumber{
-    font-weight: 700;
-    font-size: 17px;
 }

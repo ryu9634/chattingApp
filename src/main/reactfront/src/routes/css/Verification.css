@@ -61,3 +61,7 @@
     font-size: 16px;
     color:rgba(118, 118, 118, 1);
 }
+
+.verifictions__phoneNumber{
+    color: var(--main-color);
+}

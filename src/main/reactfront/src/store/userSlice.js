@@ -1,15 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const userNickName = createSlice({
-    name : "userNickName",
-    initialState : {nickName : ""},
+const userInfo = createSlice({
+    name : "userInfo",
+    initialState : {nickName : "",
+                    phoneNumber : ""},
     reducers : {
-        setNickName(status,action){
+        setUserNickName(status,action){
             status.nickName = action.payload;
+        },
+        setPhoneNumber(status,action){
+            status.phoneNumber = action.payload;
         }
     }
 })
 
-export let {setNickName} = userNickName.actions;
+export let {setUserNickName, setPhoneNumber} = userInfo.actions;
 
-export default userNickName;
+export default userInfo;

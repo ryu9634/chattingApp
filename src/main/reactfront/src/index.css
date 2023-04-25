@@ -4,6 +4,7 @@
 /* Main Components */
 @import url('./routes/css/components/textBox.css');
 @import url('./routes/css/components/register.css');
+@import url('./routes/css/components/modals.css'); 
 
 
 /*Main Elements*/
@@ -13,7 +14,6 @@
 @import url('./routes/css/elements/alerts.css');
 @import url('./routes/css/elements/margins.css');
 @import url('./routes/css/elements/paddings.css'); 
-@import url('./routes/css/elements/modals.css'); 
 
 
 

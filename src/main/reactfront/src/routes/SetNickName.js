@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import './css/SetNickName.css';
 import { useDispatch, useSelector } from "react-redux";
-import { setNickName } from '../store/userSlice.js';
+import { setUserNickName } from '../store/userSlice.js';
 
 
 function SetNickName(props){
-    const {nickName} = useSelector((state)=>state.userNickName);
+    const {nickName} = useSelector((state)=>state.userInfo);
     const [isStartChatBtnDisabled,setIsStartChatBtnDisabled] = useState(true);
     const [alert,setAlert] = useState(false);
 
@@ -35,7 +35,7 @@ function SetNickName(props){
                 </div>
                 <div className="register__row">
                     <div className='buttonFlexBox mg-bt-30'>
-                        <button className='success__button' disabled={isStartChatBtnDisabled}>Start Chat</button>
+                        <button className='success__button' onClick={()=>{props.navigator("/Home")}} disabled={isStartChatBtnDisabled}>Start Chat</button>
                     </div>
                 </div>
             </div>
@@ -48,11 +48,11 @@ function NickNameInput(props){
         const regex = /^[ㄱ-ㅎ|가-힣|a-z|A-Z|0-9|\*]+$/;
         let value = event.target.value;
         if(regex.test(value)){
-            props.dispatch(setNickName(value));
+            props.dispatch(setUserNickName(value));
             props.setAlert(false);
         }else{  
             event.target.value = value.length <= 1? "": props.nickName;
-            props.dispatch(setNickName(event.target.value));
+            props.dispatch(setUserNickName(event.target.value));
             props.setAlert(true);
         }
     }
